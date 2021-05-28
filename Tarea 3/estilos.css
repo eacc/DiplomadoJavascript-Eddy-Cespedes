@@ -37,7 +37,7 @@ aside{
     flex-direction: column;
 }
 
-.asideSeccion1{
+.asideseccion1{
     background-color: rgb(175, 120, 110);
     width: 595px;
     height: 270px;
@@ -45,7 +45,7 @@ aside{
     text-align: center;
 }
 
-.asideSeccion2{
+.asideseccion2{
     background-color: tomato;
     width: 595px;
     height: 270px;
