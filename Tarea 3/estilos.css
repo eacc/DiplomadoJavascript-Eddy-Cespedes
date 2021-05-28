@@ -24,7 +24,7 @@ main{
     height: 550px
 }
 
-.mainseccion{
+.main-seccion{
     text-align: center;
     background-color: tomato;
     width: 595px;
@@ -37,7 +37,7 @@ aside{
     flex-direction: column;
 }
 
-.asideseccion1{
+.aside-seccion1{
     background-color: rgb(175, 120, 110);
     width: 595px;
     height: 270px;
@@ -45,7 +45,7 @@ aside{
     text-align: center;
 }
 
-.asideseccion2{
+.aside-seccion2{
     background-color: tomato;
     width: 595px;
     height: 270px;
@@ -62,7 +62,7 @@ footer{
         flex-direction: column;
     }
 
-    .mainseccion{
+    .main-seccion{
         height: 275px;
         margin-bottom: 5px ;
         width: auto;
@@ -73,7 +73,7 @@ footer{
         margin-left: 0;
     }
 
-    .asideSeccion1{
+    .aside-seccion1{
         margin-right: 5px;
     }
 
