@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Gastos</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active text-success" aria-current="page" href="index.html">Gastos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-success" href="categorias.html">Categoria de Gastos</a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-9 col-lg-8">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Registro de gasto</h5>
+                <form id="formulario-gastos">
+                  <div class="row mb-3 justify-content-center">
+                    <label for="descripcion" class="col-12 col-md-5 col-lg-5">
+                      Razon del gasto:
+                    </label>
+                    <div class="col-sm-9">
+                      <textarea name="descripcion" id="descripcion" cols="20" rows="4" placeholder="Razón del gasto"
+                        class="form-control"></textarea>
+                      <div class="invalid-feedback"></div>
+                    </div>
+                  </div>
+                  <div class="row mb-3 justify-content-center">
+                    <div class="col-md-6">
+                      <label for="categoria" class="form-label">Cagetoria:</label>
+                      <select id="categorias" class="form-select">
+                        <option selected>Elige una categoria</option>
+                      </select>
+                    </div>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="row mb-3 justify-content-center">
+                    <label for="fecha" class="col-12 col-md-6 col-form-label">
+                      Fecha del gasto:
+                    </label>
+                    <div class="col-md-8">
+                      <input type="date" name="fecha" id="fecha" class="form-control" />
+                      <div class="invalid-feedback"></div>
+                    </div>
+                  </div>
+                  <div class="row mb-3 justify-content-center">
+                    <label for="monto" class="form-label">Monto:</label>
+                    <div class="col-3 col-sm-3 justify-content-center is">
+                      <input id="monto" name="monto" type="number" step="any" class="form-control" placeholder="0.00" />
+                      <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="moneda" id="moneda1" value="DOP" checked />
+
+                        <label class="form-check-label" for="moneda1">
+                          DOP
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="moneda" value="USD" id="moneda2" />
+                        <label class="form-check-label" for="moneda2">
+                          USD
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-success">
+                    Guardar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/utilidades.js"></script>
+  <script src="assets/js/mis-gastos.js"></script>
+</body>
+
+</html>

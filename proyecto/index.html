@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Gastos</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active text-success" aria-current="page" href="index.html">Gastos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-success" href="categorias.html">Categoria de Gastos</a>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="py-1 text-center container">
+      <div class="row py-lg-1">
+        <div class="col-lg-6 col-md-8 mx-auto p-2">
+          <p>
+            <a href="mis-gastos.html" class="btn btn-success my-2">Agregar Gastos</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="py-2 bg-light">
+      <div class="container">
+        <div class="row px-5">
+          <h1 class="fw-light text-center">Gastos</h1>
+          <div class="card">
+            <div class="card-header">
+              <i class="bi bi-funnel-fill text-info"></i> Filtros
+            </div>
+            <div class="card-body ">
+              <form>
+                <div class="row justify-content-center">
+                  <div class="col-3 col-sm-3 text-center ">
+                    <label for="monto">Monto:</label>
+                  </div>
+                  <div class="col-9 col-sm-9 col-md-8 col-lg-2 mb-1">
+                    <input type="number" name="monto" id="monto" class="form-control form-control-sm" />
+                  </div>
+                  <div class="col-3 col-sm-3 col-lg-2">
+                    <label for="monto">Categoria:</label>
+                  </div>
+                  <div class="col-9 col-sm-9 col-md-8 col-lg-3 mb-1">
+                    <select id="categorias" class="form-select form-select-sm">
+                      <option selected>Elige una categoria</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-6 text-center">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="moneda" id="moneda1" value="DOP" />
+
+                      <label class="form-check-label" for="moneda1">
+                        DOP
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="moneda" value="USD" id="moneda2" />
+                      <label class="form-check-label" for="moneda2">
+                        USD
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="container justify-content-center">
+            <div class="row">
+              <div id="listado-gastos" class="row g-3 text-center"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+  </main>
+
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/utilidades.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
