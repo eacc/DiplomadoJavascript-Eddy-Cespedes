@@ -7,10 +7,21 @@ window.addEventListener('load', event => {
 
         let descripcion = event.target.elements['descripcion'].value;
         let monto = event.target.elements['monto'].value;
+        let fecha = event.target.elements['fecha'].value;
 
-        if (descripcion.length === 0 && monto.length === 0) {
+        console.log(fecha)
+
+        if (descripcion.length === 0) {
             setInvalid(
                 event.target.elements['descripcion'],
+                "Este campo es obligatorio"
+            )
+            return;
+        }
+
+        if (fecha.length === 0) {
+            setInvalid(
+                event.target.elements['fecha'],
                 "Este campo es obligatorio"
             )
             return;
@@ -24,8 +35,11 @@ window.addEventListener('load', event => {
             return;
         }
 
+        
+
         removeInvalid(event.target.elements['descripcion'])
         removeInvalid(event.target.elements['monto'])
+        removeInvalid(event.target.elements['fecha'])
 
         let gasto = {
             descripcion: event.target.elements['descripcion'].value,
@@ -48,6 +62,23 @@ window.addEventListener('load', event => {
             setValid(event.target, 'Validacion correcta')
         })
 
-    console.log(renderizarCategorias())
+    document.getElementById("fecha")
+        .addEventListener('change', event => {
+            // Remove el mensaje de error
+            removeInvalid(event.target)
+
+            setValid(event.target, 'Validacion correcta')
+        })
+
+    document.getElementById("monto")
+        .addEventListener('change', event => {
+            // Remove el mensaje de error
+            removeInvalid(event.target)
+
+            setValid(event.target, 'Validacion correcta')
+        })
+
+
+    renderizarCategorias()
 
 })
